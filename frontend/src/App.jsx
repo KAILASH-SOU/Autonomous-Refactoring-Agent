@@ -5,7 +5,8 @@ import ActionPanel from './components/ActionPanel';
 import { useWebSocket } from './hooks/useWebSocket';
 
 const App = () => {
-  const { logs, diff, isConnected, sendMessage } = useWebSocket('ws://localhost:8000/ws');
+  const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000/ws';
+  const { logs, diff, isConnected, sendMessage } = useWebSocket(WS_URL);
   
   const [repoUrl, setRepoUrl] = useState('');
   

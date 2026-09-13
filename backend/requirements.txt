@@ -5,3 +5,6 @@ pygithub
 python-dotenv
 pydantic
 google-genai
+
+celery
+redis
