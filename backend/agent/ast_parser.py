@@ -1,5 +1,6 @@
 import ast
 
+
 class CodeAnalyzer(ast.NodeVisitor):
     def __init__(self):
         self.functions = []
@@ -13,8 +14,8 @@ class CodeAnalyzer(ast.NodeVisitor):
         self.classes.append(node.name)
         self.generic_visit(node)
 
+
 def parse_code(code_str: str) -> dict:
-    """Parses python code using AST and returns structured information."""
     try:
         tree = ast.parse(code_str)
         analyzer = CodeAnalyzer()
@@ -29,6 +30,7 @@ def parse_code(code_str: str) -> dict:
             "valid_syntax": False,
             "error": str(e)
         }
+
 
 def get_ast_dump(code_str: str) -> str:
     try:

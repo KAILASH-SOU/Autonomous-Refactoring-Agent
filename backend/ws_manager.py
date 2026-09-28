@@ -1,6 +1,7 @@
 from typing import List
 from fastapi import WebSocket
 
+
 class ConnectionManager:
     def __init__(self):
         self.active_connections: List[WebSocket] = []
@@ -32,5 +33,6 @@ class ConnectionManager:
                     "modified": modified
                 }
             })
+
 
 manager = ConnectionManager()
