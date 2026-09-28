@@ -8,3 +8,6 @@ google-genai
 
 celery
 redis
+
+streamlit
+websocket-client
